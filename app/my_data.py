@@ -1,6 +1,8 @@
 import json
 
-programming_languages = ["Python",]
+programming_languages = [
+    "Python",
+]
 
 frameworks = ["Django", "Django REST Framework", "FastAPI"]
 
@@ -25,7 +27,7 @@ clouds = {
         "Container Apps",
         "Container Registry",
         "Key Vault",
-        "Redis for Cache"
+        "Redis for Cache",
     ],
     "Google Cloud": [
         "Cloud Storage",
@@ -35,15 +37,23 @@ clouds = {
         "Artifact Registry",
         "Cloud Tasks",
         "Compute Engine",
-        "Cloud Build"
-    ]
+        "Cloud Build",
+    ],
 }
 
 container = ["Docker", "Docker Compose"]
 
 vcs = ["Git", "GitHub", "GitHub Actions", "CI/CD"]
 
-another_hard_skills = ["OOP", "Algorithms and Data Structures", "REST API", "Unit Testing", "Asynchronous Python", "HTML", "CSS"]
+another_hard_skills = [
+    "OOP",
+    "Algorithms and Data Structures",
+    "REST API",
+    "Unit Testing",
+    "Asynchronous Python",
+    "HTML",
+    "CSS",
+]
 
 my_skills = [
     programming_languages,
@@ -52,7 +62,7 @@ my_skills = [
     clouds,
     container,
     vcs,
-    another_hard_skills
+    another_hard_skills,
 ]
 
 bio = [
@@ -64,7 +74,7 @@ bio = [
     "designing engineering networks and as a project group leader, ",
     "where I developed strong organizational and communication skills.",
     "This experience honed my ability to solve complex problems, "
-    "manage teamwork, and make independent decisions."
+    "manage teamwork, and make independent decisions.",
 ]
 
 info = {
@@ -72,10 +82,7 @@ info = {
     "profession": "Python Developer",
     "skills": my_skills,
     "bio": bio,
-    "languages": {
-        "English": "Intermediate",
-        "Ukrainian": "Native"
-    }
+    "languages": {"English": "Intermediate", "Ukrainian": "Native"},
 }
 
 info_json = json.dumps(info, indent=4)
