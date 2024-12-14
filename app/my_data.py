@@ -85,6 +85,29 @@ my_skills = {
     "Project Management Skills": project_management_skills,
 }
 
+courses = [
+    {
+        "name": "Endpoint Security",
+        "platform": "Cisco Networking Academy",
+        "url": "https://www.credly.com/badges/5f679577-9245-4d9f-94f2-3e109d7553b3"
+    },
+    {
+        "name": "Networking Basics",
+        "platform": "Cisco Networking Academy",
+        "url": "https://www.credly.com/badges/633b006c-d312-44f3-a96b-b74dda19975b"
+    },
+    {
+        "name": "Introduction to Cybersecurity",
+        "platform": "Cisco Networking Academy",
+        "url": "https://www.credly.com/badges/c74236b2-ff54-4ada-a403-a72c982b920e"
+    },
+    {
+        "name": "AWS Fundamentals",
+        "platform": "Coursera",
+        "url": "https://coursera.org/share/defdf30529af4e9b7499863db1873ee7"
+    }
+]
+
 languages = {
     "English": "Intermediate",
     "Ukrainian": "Native",
@@ -134,7 +157,7 @@ experience = [
             "Partially automated the design process to improve efficiency.",
         ],
     },
-{
+    {
         "role": "External Engineering Networks Engineer ("
                 "LLC 'Construction Company Intergal-Bud')",
         "location": "Kyiv, Ukraine",
@@ -152,6 +175,7 @@ info = {
     "Profession": "Python Developer",
     "Bio": bio,
     "Skills": my_skills,
+    "Courses": courses,
     "Experience": experience,
     "Languages": languages,
 }
