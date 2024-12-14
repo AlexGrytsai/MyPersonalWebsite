@@ -55,15 +55,35 @@ another_hard_skills = [
     "CSS",
 ]
 
-my_skills = [
-    programming_languages,
-    frameworks,
-    db,
-    clouds,
-    container,
-    vcs,
-    another_hard_skills,
+project_management_skills = [
+    "Agile",
+    "Scrum",
+    "Kanban",
+    "Leadership & Team management",
 ]
+
+soft_skills = [
+    "Effective Communication",
+    "Teamwork",
+    "Leadership",
+    "Time Management",
+    "Critical Thinking",
+    "Problem Solving",
+    "Adaptability",
+    "Stress Management",
+    "Planning Skills",
+]
+
+my_skills = {
+    "Programming Languages": programming_languages,
+    "Frameworks": frameworks,
+    "Databases": db,
+    "Cloud Services": clouds,
+    "Containerization": container,
+    "Version Control Systems": vcs,
+    "Other Hard Skills": another_hard_skills,
+    "Project Management Skills": project_management_skills,
+}
 
 bio = [
     "I am a Python developer specializing in Python, Django,"
