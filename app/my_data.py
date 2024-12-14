@@ -1,5 +1,33 @@
 import json
 
+clouds = {
+    "AWS": [
+        "EC2",
+        "S3",
+        "RDS",
+        "Lambda",
+        "DynamoDB",
+    ],
+    "Azure": [
+        "Azure SQL",
+        "Functions",
+        "Container Apps",
+        "Container Registry",
+        "Key Vault",
+        "Redis for Cache"
+    ],
+    "Google Cloud": [
+        "Cloud Storage",
+        "Cloud Run",
+        "Secret Manager",
+        "Logging",
+        "Artifact Registry",
+        "Cloud Tasks",
+        "Compute Engine",
+        "Cloud Build"
+    ]
+}
+
 my_skills = [
     "Python",
     "Django",
@@ -10,9 +38,7 @@ my_skills = [
     "SQL",
     "PostgreSQL",
     "Redis",
-    "Azure",
-    "Google Cloud",
-    "AWS",
+    clouds,
     "GitHub Actions",
     "CI/CD"
 ]
