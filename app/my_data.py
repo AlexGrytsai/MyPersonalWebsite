@@ -85,6 +85,11 @@ my_skills = {
     "Project Management Skills": project_management_skills,
 }
 
+languages = {
+    "English": "Intermediate",
+    "Ukrainian": "Native",
+}
+
 bio = [
     "I am a Python developer specializing in Python, Django,"
     "the Django REST Framework (DRF), and Docker.",
@@ -98,11 +103,11 @@ bio = [
 ]
 
 info = {
-    "name": "Oleksandr Grytsai",
-    "profession": "Python Developer",
-    "skills": my_skills,
-    "bio": bio,
-    "languages": {"English": "Intermediate", "Ukrainian": "Native"},
+    "Name": "Oleksandr Grytsai",
+    "Profession": "Python Developer",
+    "Bio": bio,
+    "Skills": my_skills,
+    "Languages": languages,
 }
 
 info_json = json.dumps(info, indent=4)
