@@ -128,10 +128,21 @@ experience = [
     {
         "role": "Design Engineer (LLC 'RBK Spetsmontazhbud')",
         "location": "Kyiv, Ukraine",
-        "duration": "02/2013 – 12/2017",
+        "duration": "02/2015 – 12/2017",
         "details": [
             "Implemented over 30 successful construction projects.",
             "Partially automated the design process to improve efficiency.",
+        ],
+    },
+{
+        "role": "External Engineering Networks Engineer ("
+                "LLC 'Construction Company Intergal-Bud')",
+        "location": "Kyiv, Ukraine",
+        "duration": "08/2013 – 01/2015",
+        "details": [
+            "Built the process of development, control and construction "
+            "of engineering networks of water supply and sewage on the part "
+            "of the customer company and the investor.",
         ],
     },
 ]
