@@ -1,29 +1,9 @@
 from fastapi import FastAPI
 from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 
-from app.my_data import info_json, info, experience, bio
+from app.description_section import description
+from app.my_data import bio, experience
 
-description = f"""
-### Welcome to my professional site, which is styled like API documentation.**
-
-\n
-Explore details about my professional background, projects, 
-and contact information, all presented through a structured API interface.
-\n
-[
-![My GitHub](https://img.shields.io/badge/GitHub-12100E.svg?style=for-the-badge&logo=github&logoColor=white)
-](https://github.com/AlexGrytsai)
-[![My LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alexgrytsai/)
-[![My Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/a.grytsai)
-[![My Telegram](https://img.shields.io/badge/Telegram-26A5E4.svg?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/grytsai)
-[![My Email](https://img.shields.io/badge/Email-D14836.svg?style=for-the-badge&logo=gmail&logoColor=white)](mailto:a.grytsai1987@gmail.com)
-
----
-
-### Oleksandr Grytsai
-{"\n\n".join(bio)}
-
-"""
 app = FastAPI(
     title="Oleksandr Grytsai",
     description=description,
@@ -54,11 +34,11 @@ async def redoc_docs():
     tags=["Information"],
     summary="Information about me",
     description="This endpoint provides detailed information about "
-                "my professional background, including my name, profession, "
-                "technical skills, and biography.",
+    "my professional background, including my name, profession, "
+    "technical skills, and biography.",
 )
 async def me():
-    return info
+    return bio
 
 
 @app.get(
@@ -66,13 +46,14 @@ async def me():
     tags=["Information"],
     summary="My work experience with out details",
     description="In this section, you will find my work experience "
-                "with out details.",
+    "with out details.",
 )
 async def experience_short():
     short_details = [
         {k: v for k, v in exp.items() if k != "details"} for exp in experience
     ]
     return short_details
+
 
 @app.get(
     "/experience-details",
