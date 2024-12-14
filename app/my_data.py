@@ -1,5 +1,16 @@
 import json
 
+programming_languages = ["Python",]
+
+frameworks = ["Django", "Django REST Framework", "FastAPI"]
+
+db = [
+    "PostgreSQL",
+    "Redis",
+    "Azure SQL",
+    "SQLite",
+]
+
 clouds = {
     "AWS": [
         "EC2",
@@ -29,15 +40,12 @@ clouds = {
 }
 
 my_skills = [
-    "Python",
-    "Django",
-    "Django REST Framework",
+    programming_languages,
+    frameworks,
     "Docker",
     "Docker Compose",
     "Asynchronous Python",
-    "SQL",
-    "PostgreSQL",
-    "Redis",
+    db,
     clouds,
     "GitHub Actions",
     "CI/CD"
