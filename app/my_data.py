@@ -43,14 +43,16 @@ container = ["Docker", "Docker Compose"]
 
 vcs = ["Git", "GitHub", "GitHub Actions", "CI/CD"]
 
+another_hard_skills = ["OOP", "Algorithms and Data Structures", "REST API", "Unit Testing", "Asynchronous Python", "HTML", "CSS"]
+
 my_skills = [
     programming_languages,
     frameworks,
     db,
     clouds,
     container,
-    "Asynchronous Python",
-    vcs
+    vcs,
+    another_hard_skills
 ]
 
 bio = [
