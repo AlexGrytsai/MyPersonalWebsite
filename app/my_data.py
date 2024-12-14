@@ -1,49 +1,148 @@
 import json
 
 programming_languages = [
-    "Python",
+    {
+        "name": "Python",
+        "badge": "![Python](https://img.shields.io/badge/Python-3776AB?"
+                 "style=for-the-badge&logo=python&logoColor=white)",
+    },
 ]
 
-frameworks = ["Django", "Django REST Framework", "FastAPI"]
+frameworks = [
+    {
+        "name": "Django",
+        "badge": "![Django](https://img.shields.io/badge/Django-092E20?"
+                 "style=for-the-badge&logo=django&logoColor=white)",
+    },
+    {
+        "name": "Django REST Framework",
+        "badge": "![Django REST Framework](https://img.shields.io/badge/"
+                 "Django%20REST%20Framework-092E20?"
+                 "style=for-the-badge&logo=django&logoColor=white)",
+    },
+    {
+        "name": "FastAPI",
+        "badge": "![FastAPI](https://img.shields.io/badge/"
+                 "FastAPI-009688?"
+                 "style=for-the-badge&logo=fastapi&logoColor=white)",
+    },
+]
 
 db = [
-    "PostgreSQL",
-    "Redis",
-    "Azure SQL",
-    "SQLite",
+    {
+        "name": "PostgreSQL",
+        "badge": "![PostgreSQL](https://img.shields.io/badge/"
+                 "PostgreSQL-336791?"
+                 "style=for-the-badge&logo=postgresql&logoColor=white)",
+    },
+    {
+        "name": "Redis",
+        "badge": "![Redis](https://img.shields.io/badge/"
+                 "Redis-DC382D?"
+                 "style=for-the-badge&logo=redis&logoColor=white)",
+    },
+    {
+        "name": "Azure SQL",
+        "badge": "![Azure SQL](https://img.shields.io/badge/"
+                 "Azure%20SQL-0089FF?"
+                 "style=for-the-badge&logo=azure-sql&logoColor=white)",
+    },
+    {
+        "name": "SQLite",
+        "badge": "![SQLite](https://img.shields.io/badge/"
+                 "SQLite-003B57?"
+                 "style=for-the-badge&logo=sqlite&logoColor=white)",
+    },
 ]
 
-clouds = {
-    "AWS": [
-        "EC2",
-        "S3",
-        "RDS",
-        "Lambda",
-        "DynamoDB",
-    ],
-    "Azure": [
-        "Azure SQL",
-        "Functions",
-        "Container Apps",
-        "Container Registry",
-        "Key Vault",
-        "Redis for Cache",
-    ],
-    "Google Cloud": [
-        "Cloud Storage",
-        "Cloud Run",
-        "Secret Manager",
-        "Logging",
-        "Artifact Registry",
-        "Cloud Tasks",
-        "Compute Engine",
-        "Cloud Build",
-    ],
-}
+cloud_services = [
+    {
+        "name": "AWS",
+        "badge": "![AWS](https://img.shields.io/badge/"
+                 "AWS-232F3E?"
+                 "style=for-the-badge&logo=amazon-aws&logoColor=white)",
+        "services": [
+            "EC2",
+            "S3",
+            "RDS",
+            "Lambda",
+            "DynamoDB",
+        ],
+    },
+    {
+        "name": "Azure",
+        "badge": "![Azure](https://img.shields.io/badge/"
+                 "Azure-0078D4?"
+                 "style=for-the-badge&logo=microsoft-azure&logoColor=white)",
+        "services": [
+            "Azure SQL",
+            "Functions",
+            "Container Apps",
+            "Container Registry",
+            "Key Vault",
+            "Redis for Cache",
+        ],
+    },
+    {
+        "name": "Google Cloud",
+        "badge": "![Google Cloud](https://img.shields.io/badge/"
+                 "Google%20Cloud-4285F4?"
+                 "style=for-the-badge&logo=google-cloud&logoColor=white)",
+        "services": [
+            "Cloud Storage",
+            "Cloud Run",
+            "Secret Manager",
+            "Logging",
+            "Artifact Registry",
+            "Cloud Tasks",
+            "Compute Engine",
+            "Cloud Build",
+        ],
+    },
+]
 
-container = ["Docker", "Docker Compose"]
 
-vcs = ["Git", "GitHub", "GitHub Actions", "CI/CD"]
+container = [
+    {
+        "name": "Docker",
+        "badge": "![Docker](https://img.shields.io/badge/"
+                 "Docker-2496ED?"
+                 "style=for-the-badge&logo=docker&logoColor=white)",
+    },
+    {
+        "name": "Docker Compose",
+        "badge": "![Docker Compose](https://img.shields.io/badge/"
+                 "Docker%20Compose-2496ED?"
+                 "style=for-the-badge&logo=docker&logoColor=white)",
+    },
+]
+
+vcs = [
+    {
+        "name": "Git",
+        "badge": "![Git](https://img.shields.io/badge/"
+                 "Git-F05032?style=for-the-badge&logo=git&logoColor=white)",
+    },
+    {
+        "name": "GitHub",
+        "badge": "![GitHub](https://img.shields.io/badge/"
+                 "GitHub-181717?"
+                 "style=for-the-badge&logo=github&logoColor=white)",
+    },
+    {
+        "name": "GitHub Actions",
+        "badge": "![GitHub Actions](https://img.shields.io/badge/"
+                 "GitHub%20Actions-2088FF?"
+                 "style=for-the-badge&logo=github-actions&logoColor=white)",
+    },
+    {
+        "name": "CI/CD",
+        "badge": "![CI/CD](https://img.shields.io/badge/"
+                 "CI%2FCD-FF4F00?"
+                 "style=for-the-badge&logo=github-actions&logoColor=white)",
+    },
+]
+
 
 another_hard_skills = [
     "OOP",
@@ -78,7 +177,7 @@ my_skills = {
     "Programming Languages": programming_languages,
     "Frameworks": frameworks,
     "Databases": db,
-    "Cloud Services": clouds,
+    "Cloud Services": cloud_services,
     "Containerization": container,
     "Version Control Systems": vcs,
     "Other Hard Skills": another_hard_skills,
@@ -89,27 +188,37 @@ courses = [
     {
         "name": "Endpoint Security",
         "platform": "Cisco Networking Academy",
-        "url": "https://www.credly.com/badges/5f679577-9245-4d9f-94f2-3e109d7553b3",
-        "badge_url": "https://images.credly.com/size/340x340/images/0ca5f542-fb5e-4a22-9b7a-c1a1ce4c3db7/EndpointSecurity.png"
+        "url":
+            "https://www.credly.com/badges/"
+            "5f679577-9245-4d9f-94f2-3e109d7553b3",
+        "badge_url": "https://images.credly.com/size/340x340/images/"
+                     "0ca5f542-fb5e-4a22-9b7a-c1a1ce4c3db7/"
+                     "EndpointSecurity.png",
     },
     {
         "name": "Networking Basics",
         "platform": "Cisco Networking Academy",
-        "url": "https://www.credly.com/badges/633b006c-d312-44f3-a96b-b74dda19975b",
-        "badge_url": "https://images.credly.com/size/340x340/images/5bdd6a39-3e03-4444-9510-ecff80c9ce79/image.png"
+        "url":
+            "https://www.credly.com/badges/"
+            "633b006c-d312-44f3-a96b-b74dda19975b",
+        "badge_url": "https://images.credly.com/size/340x340/images/"
+                     "5bdd6a39-3e03-4444-9510-ecff80c9ce79/image.png",
     },
     {
         "name": "Introduction to Cybersecurity",
         "platform": "Cisco Networking Academy",
-        "url": "https://www.credly.com/badges/c74236b2-ff54-4ada-a403-a72c982b920e",
-        "badge_url": "https://images.credly.com/size/340x340/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png"
+        "url":
+            "https://www.credly.com/badges/"
+            "c74236b2-ff54-4ada-a403-a72c982b920e",
+        "badge_url": "https://images.credly.com/size/340x340/images/"
+                     "af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
     },
     {
         "name": "AWS Fundamentals",
         "platform": "Coursera",
         "url": "https://coursera.org/share/defdf30529af4e9b7499863db1873ee7",
-        "badge_url": ""
-    }
+        "badge_url": "",
+    },
 ]
 
 languages = {
@@ -130,7 +239,8 @@ bio = [
     "This experience also honed my ability to solve complex, "
     "non-trivial problems. I am confident that my previous experience, "
     "combined with my technical skills, will contribute to "
-    "my success as a developer. I am always seeking opportunities "
+    "my success as a developer.",
+    "I am always seeking opportunities "
     "to grow and improve as a specialist, which helps "
     "me continue moving forward.",
 ]
@@ -169,7 +279,7 @@ experience = [
     },
     {
         "role": "External Engineering Networks Engineer ("
-                "LLC 'Construction Company Intergal-Bud')",
+        "LLC 'Construction Company Intergal-Bud')",
         "location": "Kyiv, Ukraine",
         "duration": "08/2013 – 01/2015",
         "details": [
