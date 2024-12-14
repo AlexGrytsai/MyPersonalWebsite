@@ -89,22 +89,26 @@ courses = [
     {
         "name": "Endpoint Security",
         "platform": "Cisco Networking Academy",
-        "url": "https://www.credly.com/badges/5f679577-9245-4d9f-94f2-3e109d7553b3"
+        "url": "https://www.credly.com/badges/5f679577-9245-4d9f-94f2-3e109d7553b3",
+        "badge_url": "https://images.credly.com/size/340x340/images/0ca5f542-fb5e-4a22-9b7a-c1a1ce4c3db7/EndpointSecurity.png"
     },
     {
         "name": "Networking Basics",
         "platform": "Cisco Networking Academy",
-        "url": "https://www.credly.com/badges/633b006c-d312-44f3-a96b-b74dda19975b"
+        "url": "https://www.credly.com/badges/633b006c-d312-44f3-a96b-b74dda19975b",
+        "badge_url": "https://images.credly.com/size/340x340/images/5bdd6a39-3e03-4444-9510-ecff80c9ce79/image.png"
     },
     {
         "name": "Introduction to Cybersecurity",
         "platform": "Cisco Networking Academy",
-        "url": "https://www.credly.com/badges/c74236b2-ff54-4ada-a403-a72c982b920e"
+        "url": "https://www.credly.com/badges/c74236b2-ff54-4ada-a403-a72c982b920e",
+        "badge_url": "https://images.credly.com/size/340x340/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png"
     },
     {
         "name": "AWS Fundamentals",
         "platform": "Coursera",
-        "url": "https://coursera.org/share/defdf30529af4e9b7499863db1873ee7"
+        "url": "https://coursera.org/share/defdf30529af4e9b7499863db1873ee7",
+        "badge_url": ""
     }
 ]
 
