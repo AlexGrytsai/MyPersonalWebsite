@@ -102,11 +102,46 @@ bio = [
     "manage teamwork, and make independent decisions.",
 ]
 
+experience = [
+    {
+        "role": "Python Developer",
+        "location": "Kyiv, Ukraine",
+        "duration": "07/2023 – present",
+        "details": [
+            "Developed a commercial project for parsing tenders on "
+            "Prozorro (prozorro.gov.ua).",
+            "Solved technical challenges including API limitations "
+            "and caching with Redis Cloud.",
+            "Automated deployment to Azure Container Apps via GitHub Actions.",
+        ],
+    },
+    {
+        "role": "Design Engineer (Private Entrepreneur)",
+        "location": "Kyiv, Ukraine",
+        "duration": "2018 – 2023",
+        "details": [
+            "Implemented over 50 projects that were built.",
+            "Introduced SCRUM into project development processes.",
+            "Developed a solution to automate design processes up to 90%.",
+        ],
+    },
+    {
+        "role": "Design Engineer (LLC 'RBK Spetsmontazhbud')",
+        "location": "Kyiv, Ukraine",
+        "duration": "02/2013 – 12/2017",
+        "details": [
+            "Implemented over 30 successful construction projects.",
+            "Partially automated the design process to improve efficiency.",
+        ],
+    },
+]
+
 info = {
     "Name": "Oleksandr Grytsai",
     "Profession": "Python Developer",
     "Bio": bio,
     "Skills": my_skills,
+    "Experience": experience,
     "Languages": languages,
 }
 
