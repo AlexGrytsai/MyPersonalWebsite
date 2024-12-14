@@ -114,15 +114,21 @@ languages = {
 }
 
 bio = [
-    "I am a Python developer specializing in Python, Django,"
-    "the Django REST Framework (DRF), and Docker.",
-    "I have expertise in PostgreSQL, Redis, and Azure SQL databases,"
-    "as well as working with Azure, GCP and AWS cloud services. ",
-    "Before transitioning to IT, I worked as an engineer "
-    "designing engineering networks and as a project group leader, ",
-    "where I developed strong organizational and communication skills.",
-    "This experience honed my ability to solve complex problems, "
-    "manage teamwork, and make independent decisions.",
+    "I am a backend developer with over 1 year of experience specializing "
+    "in Python, Django, the Django REST Framework (DRF), and Docker.",
+    "I have experience with PostgreSQL, Redis, and Azure SQL databases, "
+    "as well as working with Azure and AWS cloud services.",
+    "Before transitioning to IT, I worked as an engineer designing "
+    "engineering networks and as a project group leader.",
+    "These roles helped me develop strong organizational "
+    "and communication skills, as I had to manage teamwork, coordinate "
+    "with multiple teams, and make independent decisions. "
+    "This experience also honed my ability to solve complex, "
+    "non-trivial problems. I am confident that my previous experience, "
+    "combined with my technical skills, will contribute to "
+    "my success as a developer. I am always seeking opportunities "
+    "to grow and improve as a specialist, which helps "
+    "me continue moving forward.",
 ]
 
 experience = [
