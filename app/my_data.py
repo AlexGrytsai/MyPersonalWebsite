@@ -39,16 +39,18 @@ clouds = {
     ]
 }
 
+container = ["Docker", "Docker Compose"]
+
+vcs = ["Git", "GitHub", "GitHub Actions", "CI/CD"]
+
 my_skills = [
     programming_languages,
     frameworks,
-    "Docker",
-    "Docker Compose",
-    "Asynchronous Python",
     db,
     clouds,
-    "GitHub Actions",
-    "CI/CD"
+    container,
+    "Asynchronous Python",
+    vcs
 ]
 
 bio = [
