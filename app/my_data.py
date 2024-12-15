@@ -57,50 +57,122 @@ db = [
 
 cloud_services = [
     {
-        "name": "AWS",
-        "badge": "![AWS](https://img.shields.io/badge/"
-                 "AWS-232F3E?"
-                 "style=for-the-badge&logo=amazon-aws&logoColor=white)",
+        "name": "Google Cloud",
+        "logo_url": "https://storage.googleapis.com/my-website-bucket/logos/"
+                    "gcp/google-cloud.svg",
         "services": [
-            "EC2",
-            "S3",
-            "RDS",
-            "Lambda",
-            "DynamoDB",
+            {
+                "name": "Cloud Storage",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/gcp/google-cloud-storage.svg",
+            },
+            {
+                "name": "Cloud Run",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/gcp/cloud_run.svg",
+            },
+            {
+                "name": "Secret Manager",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/gcp/key_management_service.svg",
+            },
+            {
+                "name": "Logging",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/gcp/google-cloud-logging.svg",
+            },
+            {
+                "name": "Container Registry",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/gcp/container_registry.svg",
+            },
+            {
+                "name": "Cloud Tasks",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/gcp/cloud_tasks.svg",
+            },
+            {
+                "name": "Compute Engine",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/gcp/google-compute-engine.svg",
+            },
+            {
+                "name": "Cloud Build",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/gcp/google-cloud-build.svg",
+            }
         ],
     },
     {
         "name": "Azure",
-        "badge": "![Azure](https://img.shields.io/badge/"
-                 "Azure-0078D4?"
-                 "style=for-the-badge&logo=microsoft-azure&logoColor=white)",
+        "logo_url": "https://storage.googleapis.com/my-website-bucket/logos/"
+                    "azure/microsoft-azure.svg",
         "services": [
-            "Azure SQL",
-            "Functions",
-            "Container Apps",
-            "Container Registry",
-            "Key Vault",
-            "Redis for Cache",
+            {
+                "name": "Azure SQL",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/azure/sql-database-generic.svg",
+            },
+            {
+                "name": "Functions",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/azure/functions.svg",
+            },
+            {
+                "name": "Container Apps",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/azure/Azure%20Container%20Apps.svg",
+            },
+            {
+                "name": "Container Registry",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/azure/container-registry.svg",
+            },
+            {
+                "name": "Key Vault",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/azure/key-vault.svg",
+            },
+            {
+                "name": "Redis for Cache",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/azure/cache-redis-product-icon.svg",
+            },
         ],
     },
     {
-        "name": "Google Cloud",
-        "badge": "![Google Cloud](https://img.shields.io/badge/"
-                 "Google%20Cloud-4285F4?"
-                 "style=for-the-badge&logo=google-cloud&logoColor=white)",
+        "name": "AWS",
+        "logo_url": "https://storage.googleapis.com/my-website-bucket/logos/"
+                    "aws/Amazon_Web_Services_Logo.svg",
         "services": [
-            "Cloud Storage",
-            "Cloud Run",
-            "Secret Manager",
-            "Logging",
-            "Artifact Registry",
-            "Cloud Tasks",
-            "Compute Engine",
-            "Cloud Build",
+            {
+                "name": "EC2",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/aws/ec2.svg",
+            },
+            {
+                "name": "S3",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/aws/amazon-s3.svg",
+            },
+            {
+                "name": "RDS",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/aws/amazon-rds.svg",
+            },
+            {
+                "name": "DynamoDB",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/aws/amazon-dynamodb.svg",
+            },
+            {
+                "name": "Lambda",
+                "logo_url": "https://storage.googleapis.com/my-website-bucket/"
+                            "logos/aws/lambda-function.svg",
+            }
         ],
     },
 ]
-
 
 container = [
     {
@@ -142,7 +214,6 @@ vcs = [
                  "style=for-the-badge&logo=github-actions&logoColor=white)",
     },
 ]
-
 
 another_hard_skills = [
     "OOP",
@@ -279,7 +350,7 @@ experience = [
     },
     {
         "role": "External Engineering Networks Engineer ("
-        "LLC 'Construction Company Intergal-Bud')",
+                "LLC 'Construction Company Intergal-Bud')",
         "location": "Kyiv, Ukraine",
         "duration": "08/2013 – 01/2015",
         "details": [
