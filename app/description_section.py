@@ -69,6 +69,15 @@ and contact information, all presented through a structured API interface.
 | EC2<br>S3<br>RDS<br>Lambda<br>DynamoDB                                                                     | Azure SQL<br>Functions<br>Container<br>Apps<br>Container Registry<br>Key Vault<br>Redis for Cache                      | Cloud Storage<br>Cloud Run<br>Secret Manager<br>Logging<br>Artifact Registry<br>Cloud Tasks<br>Compute Engine<br>Cloud Build |
 ---
 ---
+
+### Cloud services
+<img src="https://storage.googleapis.com/my-website-bucket/logos/azure/microsoft-azure.svg" alt="Azure Logo" width="100">
+| ![AWS Logo](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws.svg) | ![Azure Logo](https://cdn.svgporn.com/logos/microsoft-azure.svg) | ![Google Cloud Logo](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google-cloud.svg) |
+|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| ![EC2](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-ec2.svg)<br>EC2 <br>![S3](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-s3.svg)<br>S3 <br>![RDS](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-rds.svg)<br>RDS <br>![Lambda](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-lambda.svg)<br>Lambda <br>![DynamoDB](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-dynamodb.svg)<br>DynamoDB | ![Azure SQL](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft-sql-server.svg)<br>Azure SQL <br>![Functions](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/azure-functions.svg)<br>Functions <br>![Container Apps](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/azure-container.svg)<br>Container Apps <br>![Key Vault](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/azure-key-vault.svg)<br>Key Vault | ![Cloud Storage](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google-cloud-storage.svg)<br>Cloud Storage <br>![Cloud Run](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google-cloud-run.svg)<br>Cloud Run <br>![Secret Manager](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google-cloud-secret-manager.svg)<br>Secret Manager <br>![Logging](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google-cloud-logging.svg)<br>Logging <br>![Cloud Build](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google-cloud-build.svg)<br>Cloud Build |
+
+
+
 ### Container
 {container_section}
 ---
