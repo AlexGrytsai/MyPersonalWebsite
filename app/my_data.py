@@ -257,6 +257,12 @@ my_skills = {
 
 courses = [
     {
+        "name": "AWS Fundamentals",
+        "platform": "Coursera",
+        "url": "https://coursera.org/share/defdf30529af4e9b7499863db1873ee7",
+        "badge_url": "",
+    },
+    {
         "name": "Endpoint Security",
         "platform": "Cisco Networking Academy",
         "url":
@@ -283,12 +289,6 @@ courses = [
             "c74236b2-ff54-4ada-a403-a72c982b920e",
         "badge_url": "https://images.credly.com/size/340x340/images/"
                      "af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
-    },
-    {
-        "name": "AWS Fundamentals",
-        "platform": "Coursera",
-        "url": "https://coursera.org/share/defdf30529af4e9b7499863db1873ee7",
-        "badge_url": "",
     },
 ]
 
