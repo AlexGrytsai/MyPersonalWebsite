@@ -3,7 +3,7 @@ from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 
 from app.description_section import description
 from app.my_data import bio, experience, programming_languages, frameworks, db, \
-    cloud_services, container, vcs
+    cloud_services, container, vcs, another_hard_skills
 
 app = FastAPI(
     title="Oleksandr Grytsai",
@@ -108,6 +108,14 @@ async def containers():
 async def version_control():
     return [sys["name"] for sys in vcs]
 
+@app.get(
+    "/another-my-hard-skills",
+    tags=["Information"],
+    summary="My another hard skills",
+    description="Retrieve a list of my another hard skills.",
+)
+async def another_skills():
+    return another_hard_skills
 
 @app.get(
     "/experience",
