@@ -4,7 +4,12 @@ from app.my_data import (
     frameworks,
     db,
     container,
-    vcs, another_hard_skills, project_management_skills, bio, languages,
+    vcs,
+    another_hard_skills,
+    project_management_skills,
+    bio,
+    languages,
+    experience,
 )
 
 
@@ -78,4 +83,14 @@ class MarkdownTransformer:
 
     @staticmethod
     def languages_section() -> str:
-        return "".join(f"+ **{lang}**: {level}\n\n" for lang, level in languages.items())
+        return "".join(
+            f"+ **{lang}**: {level}\n\n" for lang, level in languages.items()
+        )
+
+    @staticmethod
+    def experience_section() -> str:
+        return "".join(
+            f"**{exp['role']}**\n\n{exp['location']}\n\n{exp['duration']}\n\n"
+            f"* {"\n\n\n*  ".join(exp['details'])}\n\n---\n\n"
+            for exp in experience
+        )
