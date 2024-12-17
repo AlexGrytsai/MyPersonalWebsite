@@ -4,7 +4,7 @@ from app.my_data import (
     frameworks,
     db,
     container,
-    vcs, another_hard_skills,
+    vcs, another_hard_skills, project_management_skills,
 )
 
 
@@ -63,3 +63,7 @@ class MarkdownTransformer:
     @staticmethod
     def another_hard_skills_section() -> str:
         return "\n".join(f"- {skill}" for skill in another_hard_skills)
+
+    @staticmethod
+    def project_management_skills_section() -> str:
+        return "\n".join(f"- {skill}" for skill in project_management_skills)
