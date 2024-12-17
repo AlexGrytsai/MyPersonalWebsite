@@ -9,7 +9,7 @@ from app.my_data import (
     project_management_skills,
     bio,
     languages,
-    experience,
+    experience, courses,
 )
 
 
@@ -93,4 +93,12 @@ class MarkdownTransformer:
             f"**{exp['role']}**\n\n{exp['location']}\n\n{exp['duration']}\n\n"
             f"* {"\n\n\n*  ".join(exp['details'])}\n\n---\n\n"
             for exp in experience
+        )
+
+    @staticmethod
+    def courses_section() -> str:
+        return "".join(
+            f" **{course['name']}**\n\n"
+            f">[{course['platform']}](course['url'])\n\n"
+            for course in courses
         )
