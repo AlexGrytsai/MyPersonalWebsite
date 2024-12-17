@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 
 from app.description_section import description
-from app.my_data import bio, experience
+from app.my_data import bio, experience, programming_languages
 
 app = FastAPI(
     title="Oleksandr Grytsai",
@@ -40,28 +40,23 @@ async def redoc_docs():
 async def me():
     return bio
 
+@app.get(
+    "/programming-languages",
+    tags=["Information"],
+    summary="List of programming languages",
+    description="Retrieve a list of programming languages I have experience "
+                "working with, along with corresponding badges and details.",
+)
+async def my_programming_languages():
+    return [lang["name"] for lang in programming_languages]
 
 @app.get(
     "/experience",
     tags=["Information"],
-    summary="My work experience with out details",
-    description="In this section, you will find my work experience "
-    "with out details.",
+    summary="My work experience",
+    description="In this section, you will find my work experience.",
 )
-async def experience_short():
-    short_details = [
-        {k: v for k, v in exp.items() if k != "details"} for exp in experience
-    ]
-    return short_details
-
-
-@app.get(
-    "/experience-details",
-    tags=["Information"],
-    summary="My work experience with details",
-    description="My work experience with details.",
-)
-async def experience_full():
+async def work_experience():
     return experience
 
 
