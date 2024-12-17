@@ -1,39 +1,6 @@
-from app.my_data import (
-    experience,
-    bio,
-    programming_languages,
-    frameworks,
-    db,
-    cloud_services,
-    container,
-    vcs,
-    another_hard_skills,
-    project_management_skills,
-    soft_skills,
-)
+from app.transformation_data_for_markdown import MarkdownTransformer
 
-programming_languages_section = "".join(
-    f"{language['badge']}\n" for language in programming_languages
-)
-
-frameworks_section = "".join(
-    f"{framework['badge']}\n" for framework in frameworks
-)
-
-data_bases_section = "".join(f"{base['badge']}\n" for base in db)
-
-cloud_services_section = "\n".join(
-    f"{cloud['badge']}\n"
-    + "\n".join(f"- {service}" for service in cloud["services"])
-    + "\n"
-    for cloud in cloud_services
-)
-
-container_section = "\n".join(
-    f"{container_item['badge']}" for container_item in container
-)
-
-vcs_section = "\n".join(f"{vcs_item['badge']}" for vcs_item in vcs)
+my_data = MarkdownTransformer()
 
 description = f"""
 ### Welcome to my professional site, which is styled like API documentation.
@@ -49,57 +16,44 @@ and contact information, all presented through a structured API interface.
 
 ---
 
-{"\n\n".join(bio)}
+{my_data.bio_section()}
 
 ### Programming languages
-{programming_languages_section}
+{my_data.programming_languages_section()}
 ---
 ---
 ### Main frameworks
-{frameworks_section}
+{my_data.frameworks_section()}
 ---
 ---
 ### Databases
-{data_bases_section}
+{my_data.data_bases_section()}
 ---
 ---
 ### Cloud services
-| ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white) | ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white) | ![Google Cloud](https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white) |
-|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| EC2<br>S3<br>RDS<br>Lambda<br>DynamoDB                                                                     | Azure SQL<br>Functions<br>Container<br>Apps<br>Container Registry<br>Key Vault<br>Redis for Cache                      | Cloud Storage<br>Cloud Run<br>Secret Manager<br>Logging<br>Artifact Registry<br>Cloud Tasks<br>Compute Engine<br>Cloud Build |
----
----
-
-### Cloud services
-<img src="https://storage.googleapis.com/my-website-bucket/logos/azure/microsoft-azure.svg" alt="Azure Logo" width="100">
-| ![AWS Logo](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws.svg) | ![Azure Logo](https://cdn.svgporn.com/logos/microsoft-azure.svg) | ![Google Cloud Logo](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google-cloud.svg) |
-|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| ![EC2](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-ec2.svg)<br>EC2 <br>![S3](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-s3.svg)<br>S3 <br>![RDS](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-rds.svg)<br>RDS <br>![Lambda](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-lambda.svg)<br>Lambda <br>![DynamoDB](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-dynamodb.svg)<br>DynamoDB | ![Azure SQL](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft-sql-server.svg)<br>Azure SQL <br>![Functions](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/azure-functions.svg)<br>Functions <br>![Container Apps](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/azure-container.svg)<br>Container Apps <br>![Key Vault](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/azure-key-vault.svg)<br>Key Vault | ![Cloud Storage](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google-cloud-storage.svg)<br>Cloud Storage <br>![Cloud Run](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google-cloud-run.svg)<br>Cloud Run <br>![Secret Manager](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google-cloud-secret-manager.svg)<br>Secret Manager <br>![Logging](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google-cloud-logging.svg)<br>Logging <br>![Cloud Build](https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google-cloud-build.svg)<br>Cloud Build |
-
-
-
+{my_data.cloud_services_section()}
 ### Container
-{container_section}
+{my_data.container_section()}
 ---
 ---
 ### Version control systems
-{vcs_section}
+{my_data.vcs_section()}
 ---
 ---
 ### Other hard skills
-{''.join(f'- {skill}\n' for skill in another_hard_skills)}
+{my_data.another_hard_skills_section()}
 ---
 ---
 ### Project management skills
-{''.join(f'- {skill}\n' for skill in project_management_skills)}
+{my_data.project_management_skills_section()}
 ---
 ---
 ### Soft skills
-{''.join(f'- {skill}\n' for skill in soft_skills)}
+{my_data.soft_skills_section()}
 ---
 ---
 ### Experience
-{''.join(f'- {exp["role"]}\n' for exp in experience)}
+{my_data.experience_section()}
 ---
 ---
 ### Courses
@@ -107,4 +61,8 @@ and contact information, all presented through a structured API interface.
 ![Networking Basics](https://images.credly.com/size/340x340/images/5bdd6a39-3e03-4444-9510-ecff80c9ce79/image.png)
 ![Introduction to Cybersecurity](https://images.credly.com/size/340x340/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png)
 
+---
+---
+### Languages
+{my_data.languages_section()}
 """

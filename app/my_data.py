@@ -318,7 +318,7 @@ bio = [
 
 experience = [
     {
-        "role": "Python Developer",
+        "role": "Python Developer (Private Entrepreneur)",
         "location": "Kyiv, Ukraine",
         "duration": "07/2023 – present",
         "details": [
