@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 
 from app.description_section import description
-from app.my_data import bio, experience, programming_languages, frameworks
+from app.my_data import bio, experience, programming_languages, frameworks, db
 
 app = FastAPI(
     title="Oleksandr Grytsai",
@@ -61,6 +61,17 @@ async def my_programming_languages():
 )
 async def my_programming_languages():
     return [framework["name"] for framework in frameworks]
+
+
+@app.get(
+    "/database",
+    tags=["Information"],
+    summary="List of databases",
+    description="Retrieve a list of databases I have experience "
+                "working with.",
+)
+async def my_programming_languages():
+    return [base["name"] for base in db]
 
 
 @app.get(
