@@ -158,10 +158,12 @@ async def work_experience():
     return experience
 
 
-@app.get("/contacts", tags=["Контакты"])
+@app.get("/contacts", tags=["Information"])
 async def contacts():
     return {
-        "email": "your-email@example.com",
-        "github": "https://github.com/your-profile",
-        "linkedin": "https://linkedin.com/in/your-profile",
+        "email": "grytsai.alex@gmail.com",
+        "github": "https://github.com/AlexGrytsai",
+        "linkedin": "https://www.linkedin.com/in/alexgrytsai/",
+        "facebook": "https://www.facebook.com/a.grytsai",
+        "telegram": "https://t.me/grytsai",
     }
