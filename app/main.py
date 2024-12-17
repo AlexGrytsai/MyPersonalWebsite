@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 
 from app.description_section import description
-from app.my_data import bio, experience, programming_languages
+from app.my_data import bio, experience, programming_languages, frameworks
 
 app = FastAPI(
     title="Oleksandr Grytsai",
@@ -34,21 +34,34 @@ async def redoc_docs():
     tags=["Information"],
     summary="Information about me",
     description="This endpoint provides detailed information about "
-    "my professional background, including my name, profession, "
-    "technical skills, and biography.",
+                "my professional background, including my name, profession, "
+                "technical skills, and biography.",
 )
 async def me():
     return bio
+
 
 @app.get(
     "/programming-languages",
     tags=["Information"],
     summary="List of programming languages",
     description="Retrieve a list of programming languages I have experience "
-                "working with, along with corresponding badges and details.",
+                "working with.",
 )
 async def my_programming_languages():
     return [lang["name"] for lang in programming_languages]
+
+
+@app.get(
+    "/frameworks",
+    tags=["Information"],
+    summary="List of frameworks",
+    description="Retrieve a list of frameworks I have experience "
+                "working with.",
+)
+async def my_programming_languages():
+    return [framework["name"] for framework in frameworks]
+
 
 @app.get(
     "/experience",
@@ -58,23 +71,6 @@ async def my_programming_languages():
 )
 async def work_experience():
     return experience
-
-
-@app.get("/projects", tags=["Проекты"])
-async def projects():
-    """Список проектов."""
-    return [
-        {
-            "name": "Проект 1",
-            "description": "Описание проекта 1",
-            "url": "https://example.com",
-        },
-        {
-            "name": "Проект 2",
-            "description": "Описание проекта 2",
-            "url": "https://example.com",
-        },
-    ]
 
 
 @app.get("/contacts", tags=["Контакты"])

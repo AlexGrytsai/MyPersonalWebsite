@@ -360,15 +360,3 @@ experience = [
         ],
     },
 ]
-
-info = {
-    "Name": "Oleksandr Grytsai",
-    "Profession": "Python Developer",
-    "Bio": bio,
-    "Skills": my_skills,
-    "Courses": courses,
-    "Experience": experience,
-    "Languages": languages,
-}
-
-info_json = json.dumps(info, indent=4)
