@@ -3,7 +3,7 @@ from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 
 from app.description_section import description
 from app.my_data import bio, experience, programming_languages, frameworks, db, \
-    cloud_services, container
+    cloud_services, container, vcs
 
 app = FastAPI(
     title="Oleksandr Grytsai",
@@ -60,7 +60,7 @@ async def my_programming_languages():
     description="Retrieve a list of frameworks I have experience "
                 "working with.",
 )
-async def my_programming_languages():
+async def my_frameworks():
     return [framework["name"] for framework in frameworks]
 
 
@@ -71,7 +71,7 @@ async def my_programming_languages():
     description="Retrieve a list of databases I have experience "
                 "working with.",
 )
-async def my_programming_languages():
+async def my_dbs():
     return [base["name"] for base in db]
 
 @app.get(
@@ -81,7 +81,7 @@ async def my_programming_languages():
     description="Retrieve a list of cloud services I have experience "
                 "working with.",
 )
-async def my_programming_languages():
+async def cloud_services_list():
     return {
         cloud["name"]: [service["name"] for service in cloud["services"]]
         for cloud in cloud_services
@@ -95,8 +95,19 @@ async def my_programming_languages():
     description="Retrieve a list of container technology I have experience "
                 "working with.",
 )
-async def my_programming_languages():
+async def containers():
     return [cont["name"] for cont in container]
+
+@app.get(
+    "/vcs",
+    tags=["Information"],
+    summary="Version control system",
+    description="Retrieve a list of container technology I have experience "
+                "working with.",
+)
+async def version_control():
+    return [sys["name"] for sys in vcs]
+
 
 @app.get(
     "/experience",
