@@ -2,7 +2,8 @@ from fastapi import FastAPI
 from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 
 from app.description_section import description
-from app.my_data import bio, experience, programming_languages, frameworks, db
+from app.my_data import bio, experience, programming_languages, frameworks, db, \
+    cloud_services
 
 app = FastAPI(
     title="Oleksandr Grytsai",
@@ -73,6 +74,19 @@ async def my_programming_languages():
 async def my_programming_languages():
     return [base["name"] for base in db]
 
+@app.get(
+    "/cloud-services",
+    tags=["Information"],
+    summary="List of Clouds",
+    description="Retrieve a list of cloud services I have experience "
+                "working with.",
+)
+async def my_programming_languages():
+    return {
+        cloud["name"]: [service["name"] for service in cloud["services"]]
+        for cloud in cloud_services
+    }
+
 
 @app.get(
     "/experience",
@@ -86,7 +100,6 @@ async def work_experience():
 
 @app.get("/contacts", tags=["Контакты"])
 async def contacts():
-    """Контактная информация."""
     return {
         "email": "your-email@example.com",
         "github": "https://github.com/your-profile",
