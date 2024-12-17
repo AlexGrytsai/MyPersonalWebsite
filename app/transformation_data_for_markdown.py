@@ -4,7 +4,7 @@ from app.my_data import (
     frameworks,
     db,
     container,
-    vcs,
+    vcs, another_hard_skills,
 )
 
 
@@ -59,3 +59,7 @@ class MarkdownTransformer:
             cloud_services_list.append("\n")
 
         return "\n".join(cloud_services_list)
+
+    @staticmethod
+    def another_hard_skills_section() -> str:
+        return "\n".join(f"- {skill}" for skill in another_hard_skills)
