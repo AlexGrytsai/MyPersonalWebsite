@@ -4,7 +4,7 @@ from app.my_data import (
     frameworks,
     db,
     container,
-    vcs, another_hard_skills, project_management_skills,
+    vcs, another_hard_skills, project_management_skills, bio,
 )
 
 
@@ -15,6 +15,10 @@ class MarkdownTransformer:
     This class provides static methods to transform different types
     of data into Markdown format.
     """
+
+    @staticmethod
+    def bio_section() -> str:
+        return "\n\n".join(bio)
 
     @staticmethod
     def programming_languages_section() -> str:
