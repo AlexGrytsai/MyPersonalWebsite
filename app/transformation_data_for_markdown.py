@@ -67,3 +67,7 @@ class MarkdownTransformer:
     @staticmethod
     def project_management_skills_section() -> str:
         return "\n".join(f"- {skill}" for skill in project_management_skills)
+
+    @staticmethod
+    def soft_skills_section() -> str:
+        return "\n".join(f"- {skill}" for skill in project_management_skills)
