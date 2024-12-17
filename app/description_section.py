@@ -57,10 +57,7 @@ and contact information, all presented through a structured API interface.
 ---
 ---
 ### Courses
-![Endpoint Security](https://images.credly.com/size/340x340/images/0ca5f542-fb5e-4a22-9b7a-c1a1ce4c3db7/EndpointSecurity.png)
-![Networking Basics](https://images.credly.com/size/340x340/images/5bdd6a39-3e03-4444-9510-ecff80c9ce79/image.png)
-![Introduction to Cybersecurity](https://images.credly.com/size/340x340/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png)
-
+{my_data.courses_section()}
 ---
 ---
 ### Languages
