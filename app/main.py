@@ -3,7 +3,7 @@ from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 
 from app.description_section import description
 from app.my_data import bio, experience, programming_languages, frameworks, db, \
-    cloud_services, container, vcs, another_hard_skills
+    cloud_services, container, vcs, another_hard_skills, soft_skills
 
 app = FastAPI(
     title="Oleksandr Grytsai",
@@ -74,6 +74,7 @@ async def my_frameworks():
 async def my_dbs():
     return [base["name"] for base in db]
 
+
 @app.get(
     "/cloud-services",
     tags=["Information"],
@@ -98,6 +99,7 @@ async def cloud_services_list():
 async def containers():
     return [cont["name"] for cont in container]
 
+
 @app.get(
     "/vcs",
     tags=["Information"],
@@ -108,6 +110,7 @@ async def containers():
 async def version_control():
     return [sys["name"] for sys in vcs]
 
+
 @app.get(
     "/another-my-hard-skills",
     tags=["Information"],
@@ -116,6 +119,17 @@ async def version_control():
 )
 async def another_skills():
     return another_hard_skills
+
+
+@app.get(
+    "/soft-skills",
+    tags=["Information"],
+    summary="My soft skills",
+    description="Retrieve a list of my soft skills.",
+)
+async def another_skills():
+    return soft_skills
+
 
 @app.get(
     "/experience",
