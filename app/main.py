@@ -2,8 +2,8 @@ from fastapi import FastAPI
 from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 
 from app.description_section import description
-from app.my_data import bio, experience, programming_languages, frameworks, db, \
-    cloud_services, container, vcs, another_hard_skills, soft_skills
+from app.my_data import bio, experience, another_hard_skills, soft_skills, \
+    my_skills, project_management_skills
 
 app = FastAPI(
     title="Oleksandr Grytsai",
@@ -43,6 +43,16 @@ async def me():
 
 
 @app.get(
+    "/all-my-hard-skills",
+    tags=["Information"],
+    summary="Information about me",
+    description="Retrieve all my hard skills at one place.",
+)
+async def all_my_hard_skills():
+    return my_skills
+
+
+@app.get(
     "/programming-languages",
     tags=["Information"],
     summary="List of programming languages",
@@ -50,7 +60,7 @@ async def me():
                 "working with.",
 )
 async def my_programming_languages():
-    return [lang["name"] for lang in programming_languages]
+    return my_skills["Programming Languages"]
 
 
 @app.get(
@@ -61,7 +71,7 @@ async def my_programming_languages():
                 "working with.",
 )
 async def my_frameworks():
-    return [framework["name"] for framework in frameworks]
+    return my_skills["Frameworks"]
 
 
 @app.get(
@@ -72,7 +82,7 @@ async def my_frameworks():
                 "working with.",
 )
 async def my_dbs():
-    return [base["name"] for base in db]
+    return my_skills["Databases"]
 
 
 @app.get(
@@ -83,10 +93,7 @@ async def my_dbs():
                 "working with.",
 )
 async def cloud_services_list():
-    return {
-        cloud["name"]: [service["name"] for service in cloud["services"]]
-        for cloud in cloud_services
-    }
+    return my_skills["Cloud Services"]
 
 
 @app.get(
@@ -97,7 +104,7 @@ async def cloud_services_list():
                 "working with.",
 )
 async def containers():
-    return [cont["name"] for cont in container]
+    return my_skills["Containerization"]
 
 
 @app.get(
@@ -108,7 +115,7 @@ async def containers():
                 "working with.",
 )
 async def version_control():
-    return [sys["name"] for sys in vcs]
+    return my_skills["Version Control Systems"]
 
 
 @app.get(
@@ -119,6 +126,16 @@ async def version_control():
 )
 async def another_skills():
     return another_hard_skills
+
+
+@app.get(
+    "/project-management-skills",
+    tags=["Information"],
+    summary="My project management skills",
+    description="Retrieve a list of my project management skills.",
+)
+async def project_management():
+    return project_management_skills
 
 
 @app.get(

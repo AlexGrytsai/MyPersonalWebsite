@@ -1,5 +1,3 @@
-import json
-
 programming_languages = [
     {
         "name": "Python",
@@ -245,13 +243,18 @@ soft_skills = [
 ]
 
 my_skills = {
-    "Programming Languages": programming_languages,
-    "Frameworks": frameworks,
-    "Databases": db,
-    "Cloud Services": cloud_services,
-    "Containerization": container,
-    "Version Control Systems": vcs,
-    "Other Hard Skills": another_hard_skills,
+    "Programming Languages": [
+        language["name"] for language in programming_languages
+    ],
+    "Frameworks": [framework["name"] for framework in frameworks],
+    "Databases": [base["name"] for base in db],
+    "Cloud Services": {
+        cloud["name"]: [service["name"] for service in cloud["services"]]
+        for cloud in cloud_services
+    },
+    "Containerization": [cont["name"] for cont in container],
+    "Version Control Systems": [sys["name"] for sys in vcs],
+    "Another Hard Skills": another_hard_skills,
     "Project Management Skills": project_management_skills,
 }
 
