@@ -3,7 +3,7 @@ from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 
 from app.description_section import description
 from app.my_data import bio, experience, programming_languages, frameworks, db, \
-    cloud_services
+    cloud_services, container
 
 app = FastAPI(
     title="Oleksandr Grytsai",
@@ -87,6 +87,16 @@ async def my_programming_languages():
         for cloud in cloud_services
     }
 
+
+@app.get(
+    "/container",
+    tags=["Information"],
+    summary="List of container technology",
+    description="Retrieve a list of container technology I have experience "
+                "working with.",
+)
+async def my_programming_languages():
+    return [cont["name"] for cont in container]
 
 @app.get(
     "/experience",
