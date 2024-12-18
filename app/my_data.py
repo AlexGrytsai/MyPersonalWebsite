@@ -301,22 +301,30 @@ languages = {
 }
 
 bio = [
-    "I am a backend developer with over 1 year of experience specializing "
-    "in Python, Django, the Django REST Framework (DRF), and Docker.",
-    "I have experience with PostgreSQL, Redis, and Azure SQL databases, "
-    "as well as working with Azure and AWS cloud services.",
-    "Before transitioning to IT, I worked as an engineer designing "
-    "engineering networks and as a project group leader.",
-    "These roles helped me develop strong organizational "
-    "and communication skills, as I had to manage teamwork, coordinate "
-    "with multiple teams, and make independent decisions. "
-    "This experience also honed my ability to solve complex, "
-    "non-trivial problems. I am confident that my previous experience, "
-    "combined with my technical skills, will contribute to "
-    "my success as a developer.",
-    "I am always seeking opportunities "
-    "to grow and improve as a specialist, which helps "
-    "me continue moving forward.",
+    "I am a backend developer with over a year of experience, specializing in "
+    "Python, Django, Django REST Framework (DRF), and Docker.",
+    "I have solid expertise in working with PostgreSQL, Redis, and "
+    "Azure SQL databases, as well as cloud services like Azure and AWS.",
+    "My technical skills are complemented by a deep understanding "
+    "of software development principles, allowing me to deliver reliable, "
+    "scalable solutions.",
+    "Before transitioning to IT, I worked as an engineering designer "
+    "in construction, where I was responsible for managing and coordinating "
+    "projects with multiple teams, clients, and contractors.",
+    "This role honed my organizational, leadership, and communication skills, "
+    "enabling me to effectively lead teams and manage complex tasks.",
+    "I also led a team of designers, which developed my ability to make "
+    "independent decisions, prioritize tasks, and ensure projects were "
+    "delivered on time.",
+    "These experiences have shaped me into a well-rounded professional, "
+    "capable of solving complex problems and contributing meaningfully "
+    "to any team.",
+    "I am not just a junior developer; I bring strong organizational and "
+    "leadership skills, a proactive approach to learning, and a focus "
+    "on delivering high-quality results.",
+    "I am committed to continuous growth and improvement, "
+    "and I am confident that my background will help me excel "
+    "in any development role.",
 ]
 
 experience = [
