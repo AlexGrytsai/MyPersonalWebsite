@@ -33,10 +33,9 @@ async def redoc_docs():
 @app.get(
     "/about-me",
     tags=["Information"],
-    summary="Information about me",
+    summary="Retrieve detailed information about me",
     description="This endpoint provides detailed information about "
-                "my professional background, including my name, profession, "
-                "technical skills, and biography.",
+                "my name, profession, biography, and technical skills.",
 )
 async def me():
     return bio
@@ -45,8 +44,9 @@ async def me():
 @app.get(
     "/all-my-hard-skills",
     tags=["Information"],
-    summary="Information about me",
-    description="Retrieve all my hard skills at one place.",
+    summary="Retrieve all hard skills",
+    description="This endpoint provides a comprehensive list of all "
+                "my hard skills, including technical and professional skills.",
 )
 async def all_my_hard_skills():
     return my_skills
@@ -56,8 +56,8 @@ async def all_my_hard_skills():
     "/programming-languages",
     tags=["Information"],
     summary="List of programming languages",
-    description="Retrieve a list of programming languages I have experience "
-                "working with.",
+    description="This endpoint returns a list of programming languages "
+                "I have expertise in.",
 )
 async def my_programming_languages():
     return my_skills["Programming Languages"]
@@ -67,8 +67,8 @@ async def my_programming_languages():
     "/frameworks",
     tags=["Information"],
     summary="List of frameworks",
-    description="Retrieve a list of frameworks I have experience "
-                "working with.",
+    description="This endpoint provides a list of frameworks "
+                "I have experience working with.",
 )
 async def my_frameworks():
     return my_skills["Frameworks"]
@@ -78,8 +78,8 @@ async def my_frameworks():
     "/database",
     tags=["Information"],
     summary="List of databases",
-    description="Retrieve a list of databases I have experience "
-                "working with.",
+    description="This endpoint lists the databases I have worked with "
+                "and have experience managing.",
 )
 async def my_dbs():
     return my_skills["Databases"]
@@ -88,9 +88,9 @@ async def my_dbs():
 @app.get(
     "/cloud-services",
     tags=["Information"],
-    summary="List of Clouds",
-    description="Retrieve a list of cloud services I have experience "
-                "working with.",
+    summary="List of cloud services",
+    description="This endpoint provides a list of cloud platforms "
+                "and services I have experience using.",
 )
 async def cloud_services_list():
     return my_skills["Cloud Services"]
@@ -99,9 +99,9 @@ async def cloud_services_list():
 @app.get(
     "/container",
     tags=["Information"],
-    summary="List of container technology",
-    description="Retrieve a list of container technology I have experience "
-                "working with.",
+    summary="List of container technologies",
+    description="This endpoint provides a list of containerization "
+                "technologies I have experience working with.",
 )
 async def containers():
     return my_skills["Containerization"]
@@ -110,9 +110,9 @@ async def containers():
 @app.get(
     "/vcs",
     tags=["Information"],
-    summary="Version control system",
-    description="Retrieve a list of container technology I have experience "
-                "working with.",
+    summary="List of version control systems",
+    description="This endpoint provides a list of version control systems "
+                "I have used in my projects.",
 )
 async def version_control():
     return my_skills["Version Control Systems"]
@@ -121,8 +121,9 @@ async def version_control():
 @app.get(
     "/another-my-hard-skills",
     tags=["Information"],
-    summary="My another hard skills",
-    description="Retrieve a list of my another hard skills.",
+    summary="Additional hard skills",
+    description="This endpoint provides a list of my additional hard "
+                "skills beyond the main categories.",
 )
 async def another_skills():
     return another_hard_skills
@@ -131,8 +132,9 @@ async def another_skills():
 @app.get(
     "/project-management-skills",
     tags=["Information"],
-    summary="My project management skills",
-    description="Retrieve a list of my project management skills.",
+    summary="Project management skills",
+    description="This endpoint provides a list of my project management "
+                "skills, including methodologies and tools.",
 )
 async def project_management():
     return project_management_skills
@@ -141,24 +143,32 @@ async def project_management():
 @app.get(
     "/soft-skills",
     tags=["Information"],
-    summary="My soft skills",
-    description="Retrieve a list of my soft skills.",
+    summary="Soft skills",
+    description="This endpoint provides a list of my soft skills, "
+                "focusing on interpersonal and communication abilities.",
 )
-async def another_skills():
+async def soft_skills_endpoint():
     return soft_skills
 
 
 @app.get(
     "/experience",
     tags=["Information"],
-    summary="My work experience",
-    description="In this section, you will find my work experience.",
+    summary="Work experience",
+    description="This endpoint provides an overview of my professional "
+                "work experience, including roles and achievements.",
 )
 async def work_experience():
     return experience
 
 
-@app.get("/contacts", tags=["Information"])
+@app.get(
+    "/contacts",
+    tags=["Information"],
+    summary="Contact information",
+    description="This endpoint provides links and details to connect with me "
+                "via email, GitHub, LinkedIn, Facebook, and Telegram.",
+)
 async def contacts():
     return {
         "email": "grytsai.alex@gmail.com",
