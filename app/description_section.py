@@ -13,11 +13,15 @@ and contact information, all presented through a structured API interface.
 [![My Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/a.grytsai)
 [![My Telegram](https://img.shields.io/badge/Telegram-26A5E4.svg?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/grytsai)
 [![My Email](https://img.shields.io/badge/Email-D14836.svg?style=for-the-badge&logo=gmail&logoColor=white)](mailto:a.grytsai1987@gmail.com)
-
+---
 ---
 
 {my_data.bio_section()}
 
+[![My Resume](https://img.shields.io/badge/Resume-Download-blue)](https://storage.googleapis.com/my-website-bucket/Oleksandr-Grytsai-Python-Developer.pdf)
+
+---
+---
 ### Programming languages
 {my_data.programming_languages_section()}
 ---
